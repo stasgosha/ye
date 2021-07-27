@@ -1,0 +1,40 @@
+.breadcrumbs{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin-bottom: 5px;
+	margin-top: -20px;
+
+	@media screen and (max-width: 1199px){
+		margin-top: 0;
+	}
+
+	li{
+		font-size: 14px;
+		line-height: 1.2;
+		font-weight: 300;
+
+		&:after{
+			content: ' / ';
+			color: rgba($text-color, .5);
+		}
+
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+
+		a{
+			color: rgba($text-color, .5);
+
+			&:hover{
+				color: $primary;
+			}
+		}
+
+		@media screen and (max-width: 767px){
+			font-size: 13px;
+		}
+	}
+}

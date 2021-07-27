@@ -1,0 +1,72 @@
+.btn{
+	color: $primary;
+	font-weight: 400;
+	text-align: center;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 5px 16px;
+	min-height: 34px;
+	font-family: $main-font;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all $t;
+	border-radius: 0;
+	appearance: none;
+	box-shadow: none;
+	border: 1px solid $primary;
+	position: relative;
+
+	&:focus{
+		outline: none;
+	}
+
+	&:hover,
+	&:focus{
+		color: #fff;
+		background: $primary;
+	}
+
+	&.btn-fullwidth{
+		width: 100%;
+	}
+
+	&.xs-fullwidth{
+		@media screen and (max-width: 575px){
+			width: 100%;
+		}
+	}
+
+	.btn-icon{
+		flex: none;
+		width: 22px;
+		height: 22px;
+		display: block;
+		margin-right: 12px;
+		fill: $primary;
+		transition: all $t;
+	}
+
+	&:hover{
+		.btn-icon{
+			fill: #fff;
+		}
+	}
+}
+
+.action-btn{
+	.btn-icon{
+		width: 16px;
+		height: 16px;
+		fill: $primary;
+		display: block;
+		transition: all $t;
+	}
+
+	&:hover,
+	&:focus{
+		.btn-icon{
+			fill: $text-color;
+		}
+	}
+}

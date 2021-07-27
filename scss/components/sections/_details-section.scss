@@ -1,0 +1,194 @@
+.details-section{
+	padding-top: 12px;
+
+	.note{
+		font-size: 15px;
+		line-height: 1.333;
+		color: #747580;
+		margin-top: 15px;
+	}
+
+	.section-inner{
+		display: flex;
+		padding: 16px 10px;
+		background: #fff;
+		box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.09);
+	}
+
+	.section-table{
+		flex: auto;
+	}
+
+	.section-chart{
+		width: 300px;
+		flex: none;
+		margin-left: 30px;
+
+		.chart-area{
+			width: calc(100% + 30px * 2);
+			margin-left: -30px;
+			margin-right: -30px;
+			background: transparent;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-inner{
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+
+		.section-chart{
+			width: 100%;
+			margin-bottom: 30px;
+			margin-left: 0;
+			max-width: 500px;
+		}
+	}
+}
+
+.details-table{
+	width: 100%;
+	border-spacing: 0;
+
+	.nowrap{
+		white-space: nowrap;
+	}
+
+	thead{
+	}
+
+	.spacer{
+		td{
+			height: 16px;
+			border-bottom: 0;
+			padding: 0 !important;
+			font-size: 0;
+		}
+
+		+ .subcaption{
+			td{
+				border-top: 0;
+			}
+		}
+	}
+
+	th{
+		font-size: 16px;
+		font-weight: bold;
+		padding: 8px 20px;
+		height: 38px;
+		border-bottom: 1px solid #FAF5F2;
+
+		&.text-left{
+			text-align: left;
+		}
+
+		&.color-accent{
+			color: $primary;
+		}
+
+		&:first-child{
+			padding-left: 0;
+		}
+
+		&:last-child{
+			padding-right: 0;
+		}
+
+		&.text-right{
+			text-align: right;
+			font-weight: 400;
+		}
+	}
+
+	td{
+		height: 40px;
+		padding: 8px 20px;
+		font-size: 16px;
+		color: $text-color;
+
+		&.text-right{
+			text-align: right;
+		}
+
+		small{
+			font-size: 12px;
+			opacity: .5;
+			max-width: 260px;
+			display: inline-block;
+		}
+	}
+
+	tbody tr{
+		&.subcaption{
+			td{
+				font-weight: 600;
+				padding-top: 16px;
+				border-top: 1px solid #FAF5F2;
+			}
+		}
+
+		td{
+			border-bottom: 1px solid #FAF5F2;
+
+			&:first-child{
+				padding-left: 0;
+			}
+
+			&:last-child{
+				padding-right: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		th{
+			font-size: 16px;
+		}
+
+		td{
+			font-size: 13px;
+		}
+
+		tbody tr.subcaption{
+			td{
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px){
+	.details-table-wrapper{
+		overflow-x: auto;
+		width: calc(100vw - 10px * 2 - 15px * 2);
+
+		table{
+			width: 600px;
+		}
+	}
+}
+
+.details-caption{
+	text-align: center;
+	margin-bottom: 16px;
+
+	h1,h2,h3{
+		font-size: 18px;
+		font-weight: 400;
+		margin-bottom: 8px;
+	}
+
+	p{
+		font-size: 15px;
+		line-height: 20px;
+		color: #A2A1A2;
+	}
+
+	@media screen and (max-width: 767px){
+		p{
+			font-size: 14px;
+		}
+	}
+}

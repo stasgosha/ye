@@ -1,0 +1,68 @@
+.filter-block{
+	font-size: 15px;
+	color: #747580;
+	display: flex;
+	width: calc(100% + 10px * 2);
+	margin-left: -10px;
+	margin-right: -10px;
+	
+	.block-group{
+		padding: 0 10px;
+		display: flex;
+		align-items: center;
+
+		p{
+			margin-bottom: 0;
+			margin-right: 10px;
+			white-space: nowrap;
+		}
+	}
+
+	input[type="date"],
+	input[type="text"]{
+		appearance: none;
+		width: 120px;
+		border: 1px solid #454445;
+		border-radius: 0;
+		padding: 0 13px;
+		height: 34px;
+		font-size: 15px;
+		background: transparent;
+		color: #747580;
+		font-family: inherit;
+	}
+
+	select{
+		height: 34px;
+	}
+
+	@media screen and (max-width: 575px){
+		flex-wrap: wrap;
+
+		.block-group{
+			width: 100%;
+			margin-bottom: 10px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.block-group{
+			p:not(.no-min-width){
+				width: 20px;
+			}
+
+			input{
+				width: auto;
+				flex: auto;
+			}
+
+			.btn{
+				width: 100%;
+			}
+		}
+	}
+}

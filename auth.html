@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Авторизація | ЙЕ</title>
+
+	<link rel="stylesheet" href="css/slick.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="auth-page">
+	<div class="wrapper" id="top">
+		<div class="auth-wrapper">
+
+			<!-- на основі https://rc4ss.utilysuite.com/?ReturnUrl=%2Faccounts%2F1698%2FState -->
+			<div class="middle-box text-center loginscreen">
+				<div>
+					<img src="img/logo-dark.svg" alt="" class="logo-image">
+
+					<h3>Ласкаво просимо до особистого кабінету споживача</h3>
+
+					<form class="m-t" role="form" action="/" method="post">
+						<input type="hidden" id="AccountId" name="AccountId" value="" />
+						<input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/accounts/1698/State" />
+						<input type="hidden" id="HostName" name="HostName" value="rc4ss.utilysuite.com" />
+						<input type="hidden" id="UserModel" name="UserModel" value="" />
+
+						<div class="form-group">
+							<input
+								class="form-control"
+								placeholder="Пошта"
+								autofocus=""
+								autocomplete="on"
+								type="email"
+								data-val="true"
+								data-val-email="Поле Електронна скринька має невірний формат: myname@example.com."
+								data-val-required="Поле Електронна скринька обов'язкове."
+								id="Email"
+								name="Email"
+								value=""
+							/>
+							<span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+						</div>
+						<div class="form-group">
+							<input class="form-control" placeholder="Пароль" type="password" data-val="true" data-val-required="Поле Пароль обов'язкове." id="Password" name="Password" />
+							<span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+
+							<a class="btn-link" href="/Forgot"><small>Забули пароль?</small></a>
+						</div>
+
+						<button type="submit" class="btn btn-primary block full-width m-b">Ввійти</button>
+
+						<input name="__RequestVerificationToken" type="hidden" value="CfDJ8N_dSrN7iK1CuR6WYuMv0tz2Hcpnu6JVvv-1CKUvvd4VH3PY95QOhPK70heI0wpHqACr3961-Yqk66kTR2qrnzyJspOkmj8mX_cxaLxZrLXFcd0PvgyrL9YlR_Bas2EuEM08AVc9gdrVU_98aOtYPUo" />
+					</form>
+
+					<p class="m-t form-footer">
+						<small>Наші рішення працюють! <br><a href="http://extracode.com.ua">Extracode</a> © 2018-2021</small>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

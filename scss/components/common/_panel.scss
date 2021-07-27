@@ -1,0 +1,136 @@
+.panel{
+	position: fixed;
+	left: 0;
+	top: 0;
+	transform: translateX(-100%);
+	background: $body-bg;
+	width: 280px;
+	height: 100vh;
+	z-index: 200;
+	transition: all $t;
+	opacity: 0;
+	visibility: hidden;
+
+	&:after{
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		left: 100%;
+		top: 0;
+		background: #000;
+		opacity: .63;
+		width: 0;
+	}
+
+	&.opened{
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+
+		&:after{
+			width: 100vw;
+		}
+	}
+
+	.panel-inner{
+		height: auto;
+		max-height: 100vh;
+		overflow-y: auto;
+		overscroll-behavior-y: contain;
+		padding: 30px 15px;
+	}
+
+	.panel-close{
+		position: absolute;
+		width: 36px;
+		height: 36px;
+		right: 0;
+		top: 0;
+		z-index: 5;
+
+		&:before,
+		&:after{
+			content: '';
+			display: block;
+			width: 22px;
+			height: 2px;
+			background: $primary;
+			position: absolute;
+			left: calc(50% - 11px);
+			top: calc(50% - 1px);
+		}
+
+		&:before{
+			transform: rotate(-45deg);
+		}
+
+		&:after{
+			transform: rotate(45deg);
+		}
+	}
+
+	.panel-nav{
+		font-size: 15px;
+		line-height: 1.5;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+
+		li{
+			margin-bottom: 10px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			a{
+				color: #fff;
+
+				&:hover{
+					color: $primary;
+				}
+			}
+
+			&.current-menu-item,
+			&.current-menu-parent{
+				a{
+					color: $primary;
+				}
+			}
+			
+			&.current-menu-item{
+				a{
+					cursor: default;
+				}
+			}
+		}
+	}
+
+	.panel-contacts{
+		padding-top: 30px;
+		border-top: 1px dashed $pale;
+		display: flex;
+		flex-direction: column;
+
+		.phone-link{
+			margin-bottom: 10px;
+		}
+
+		address{
+			font-style: normal;
+			color: #fff;
+			margin-top: 24px;
+		}
+
+		.socials-list{
+			margin: 35px 0;
+		}
+
+		.btn{
+			font-size: 14px;
+			padding-left: 15px;
+			padding-right: 15px;
+			min-height: 50px;
+		}
+	}
+}

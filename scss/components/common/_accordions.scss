@@ -1,0 +1,73 @@
+.accordion{
+	margin-bottom: 16px;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.ac-header{
+		display: flex;
+		align-items: center;
+		padding: 16px;
+		background: #F9F9F9;
+		color: $text-color;
+		cursor: pointer;
+		transition: all $t;
+
+		&:hover,
+		&:focus-within{
+			background: darken(#F9F9F9, 10%);
+		}
+	}
+
+	.ac-caption{
+		font-size: 16px;
+		line-height: 1.5;
+		font-weight: 400;
+		flex: auto;
+		max-width: 720px;
+	}
+
+	.ac-icon{
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+		flex: none;
+		fill: #B8BABA;
+	}
+
+	.ac-opener{
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+
+		&:after{
+			content: '';
+			background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1.41.59L6 5.17 10.59.59 12 2 6 8 0 2 1.41.59z' fill='%23FF6900'/%3E%3C/svg%3E") no-repeat center center / contain;
+			width: 12px;
+			height: 12px;
+			display: block;
+			transition: all $t;
+		}
+
+		&:hover,
+		&:focus{
+			outline: none;
+		}
+	}
+
+	&.opened{
+		.ac-opener{
+			transform: rotate(-180deg);
+		}
+	}
+
+	.ac-content{
+		padding: 0 16px 16px;
+		background: #F9F9F9;
+		display: none;
+	}
+}
